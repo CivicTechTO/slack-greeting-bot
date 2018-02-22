@@ -3,9 +3,6 @@ import json
 import requests
 import os
 
-SLACK_CLIENT_ID = os.environ['SLACK_CLIENT_ID']
-SLACK_CLIENT_SECRET = os.environ['SLACK_CLIENT_ID']
-SLACK_VERIFICATION_TOKEN = os.environ['SLACK_VERIFICATION_TOKEN']
 SLACK_BOT_OAUTH_TOKEN = os.environ['SLACK_BOT_OAUTH_TOKEN']
 SLACK_BOT_USERNAME = os.environ['SLACK_BOT_USERNAME']
 
