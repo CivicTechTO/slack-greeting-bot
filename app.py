@@ -23,9 +23,10 @@ def inbound():
         outbound_uri_string = 'https://slack.com/api/chat.postMessage?token=%s&channel=%s&text=%s&as_user=true&username=%s' %(SLACK_BOT_OAUTH_TOKEN,user_id,message,SLACK_BOT_USERNAME)
         r = requests.get(outbound_uri_string)
         r.status_code
-        
+        print(channel_id)
         return("New user joined", 200)
     else:
+        print(channel_id)
         return("Channel not defined for the slackbot", 400)
     
     #return(jsonPayload["challenge"], 200)
