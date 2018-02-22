@@ -1,5 +1,5 @@
 # Slack Greeting Bot
----
+
 Greetings! this is a Flask application that is hooked up to slack events api.
 It sends a welcome message to the user that has just joined a channel this slackbot is install on.
 
@@ -8,7 +8,6 @@ It sends a welcome message to the user that has just joined a channel this slack
 This Flask application is using python3, since python2.7 will be retiring [soon!!!](https://pythonclock.org/)
 
 # Installation
----
 
 ```shell
 #clone this repo
@@ -32,7 +31,6 @@ Once the installation is done, can run the application locally.
 
 ```shell
 
-
 export FLASK_APP=app.py
 
 export FLASK_DEBUG=1
@@ -44,4 +42,11 @@ export SLACK_BOT_USERNAME='YOUR SLACKBOT USERNAME'
 
 export CHANNEL_ID='YOUR_WORKSPACE_CHANNEL_ID'
 
+# run the Flask app
+python -m flask run
+
 ```
+
+# Testing with Slack API
+
+To test with the Slack API from your local development environment, would suggest `ngrok` to tunnel the flask app running on the machine's port.
