@@ -12,7 +12,7 @@ app = Flask(__name__)
 @app.route("/slack", methods=['POST'])
 def inbound():
     jsonPayload = request.json
-    '''
+    
     event_type = jsonPayload["event"]["type"]
     token = jsonPayload["token"]
     team_id = jsonPayload["team_id"]
@@ -27,8 +27,8 @@ def inbound():
         return("New user joined", 200)
     else:
         return("Channel not defined for the slackbot", 400)
-    '''
-    return(jsonPayload["challenge"], 200)
+    
+    #return(jsonPayload["challenge"], 200)
     
 
 def welcome_message():
