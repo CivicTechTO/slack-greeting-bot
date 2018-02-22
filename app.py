@@ -14,6 +14,7 @@ app = Flask(__name__)
 @app.route("/slack", methods=['POST'])
 def inbound():
     jsonPayload = request.json
+    '''
     event_type = jsonPayload["event"]["type"]
     token = jsonPayload["token"]
     team_id = jsonPayload["team_id"]
@@ -23,7 +24,9 @@ def inbound():
     outbound_uri_string = 'https://slack.com/api/chat.postMessage?token=%s&channel=%s&text=%s&as_user=true&username=%s' %(SLACK_BOT_OAUTH_TOKEN,user_id,message,SLACK_BOT_USERNAME)
     r = requests.get(outbound_uri_string)
     r.status_code
-    return("New user joined", 200)
+    '''
+    #return("New user joined", 200)
+    return(jsonPayload["challenge"], 200)
 
 def welcome_message():
     message = open('welcome_text.txt', 'r').read()
