@@ -13,8 +13,8 @@ app = Flask(__name__)
 def inbound():
     jsonPayload = request.json
     
-    if jsonPayload.challenge:
-        return(jsonPayload.challenge, 200)
+    if jsonPayload["challenge"]:
+        return(jsonPayload["challenge"], 200)
     else:
         event_type = jsonPayload["event"]["type"]
         token = jsonPayload["token"]
