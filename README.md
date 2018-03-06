@@ -1,7 +1,7 @@
 # Slack Greeting Bot
 
 Greetings! this is a Flask application that is hooked up to slack events api.
-It sends a welcome message to the user that has just joined a channel this slackbot is install on.
+It sends a welcome message to the user that has just joined channels that this slackbot is configured to react to.
 
 # Requirements
 
@@ -40,7 +40,7 @@ export SLACK_BOT_OAUTH_TOKEN='YOU_BOT_TOKEN_FROM_SLACK'
 
 export SLACK_BOT_USERNAME='YOUR SLACKBOT USERNAME'
 
-export CHANNEL_ID='YOUR_WORKSPACE_CHANNEL_ID'
+export CHANNEL_IDS='COMMA_SEPARATED_LIST_OF_CHANNEL_IDS'
 
 # run the Flask app
 python -m flask run
