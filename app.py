@@ -1,4 +1,4 @@
-from flask import Flask, request, Response
+from flask import Flask, request, Response, render_template
 import json
 import requests
 import os
@@ -8,6 +8,10 @@ SLACK_BOT_USERNAME = os.environ['SLACK_BOT_USERNAME']
 CHANNEL_ID = os.environ['CHANNEL_ID']
 
 app = Flask(__name__)
+
+@app.route('/')
+def home():
+    return render_template('home.html')
 
 @app.route("/slack", methods=['POST'])
 def inbound():
