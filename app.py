@@ -5,7 +5,7 @@ import os
 
 SLACK_BOT_OAUTH_TOKEN = os.environ['SLACK_BOT_OAUTH_TOKEN']
 SLACK_BOT_USERNAME = os.environ['SLACK_BOT_USERNAME']
-CHANNEL_ID = os.environ['CHANNEL_ID']
+CHANNEL_IDS = os.environ['CHANNEL_IDS'].split(',')
 
 app = Flask(__name__)
 
@@ -25,7 +25,7 @@ def inbound():
         team_id = jsonPayload["team_id"]
         user_id = jsonPayload["event"]["user"]
         channel_id = jsonPayload["event"]["channel"]
-        if channel_id == CHANNEL_ID:
+        if channel_id in CHANNEL_IDS:
             message = welcome_message()
             outbound_uri_string = 'https://slack.com/api/chat.postMessage?token=%s&channel=%s&text=%s&as_user=true&username=%s' %(SLACK_BOT_OAUTH_TOKEN,user_id,message,SLACK_BOT_USERNAME)
             r = requests.get(outbound_uri_string)
