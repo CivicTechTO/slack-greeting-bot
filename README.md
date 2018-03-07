@@ -65,4 +65,4 @@ Please see our [contributing guidelines](CONTRIBUTING.md).
 
 # LICENSE
 
-See [LICENSE](LICENSE.md)
+See [LICENSE](LICENSE)
