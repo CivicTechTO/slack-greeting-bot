@@ -50,3 +50,19 @@ python -m flask run
 # Testing with Slack API
 
 To test with the Slack API from your local development environment, would suggest `ngrok` to tunnel the flask app running on the machine's port.
+
+# Deployment
+
+We use [Heroku ](https://heroku.com) for hosting the chatbot service.
+
+The `master` branch is setup to auto deploy to heroku whenever changes are pushed into the master branch. The `master` branch is a protected branch, changes can only be submitting through pull requests and requires revies before merging. See our [CONTRIBUTING](CONTRIBUTING.md) for 
+
+The chatbot service lives at: [https://ctto-greetingbot.herokuapp.com](https://ctto-greetingbot.herokuapp.com)
+
+# Contributing
+
+Please see our [contributing guidelines](CONTRIBUTING.md).
+
+# LICENSE
+
+See [LICENSE](LICENSE.md)
