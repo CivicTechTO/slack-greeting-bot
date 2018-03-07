@@ -4,19 +4,19 @@ We love pull requests! Our process for accepting changes has a few steps:
 
 1. If you haven't submitted anything before, and you aren't (yet!) a member of our organization, fork and clone the repo:
 
-        ```shell 
+        ``` 
         git clone git@github.com:<your-username>/<repository-name>.git
         ```
 
 Organization members should clone the upsteam repo, instead of working from a fork:
 
-        ```shell
+        ```
         git clone git@github.com:CivicTechTO/slack-greeting-bot.git
         ```
 
 2. Create a new branch for the changes you want to work on. Choose a topic for your branch name that reflects the change:
 
-        ```shell
+        ```
         git checkout -b <branch-name>
         ```
 
